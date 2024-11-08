@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Text Colors */
+  --text-primary: #3d5161;
+  --text-secondary: #b9cde2;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  /* Neutral Colors */
+  --neutral-white: #ffffff;
+  --neutral-off-white: #f9f5f3;
+  --neutral-gray: #8d8f96;
+  --neutral-light-gray: #bcc0cd;
+  --neutral-light-gray-alt: #b9cde2;
+
+  /* Accent Colors */
+  --accent-blue: #009acf;
+  --accent-light-blue: #009acf;
+  --accent-orange: #ff7f5c;
+  --accent-light-orange: #f4dbd4;
+
+  /* Success Colors */
+  --status-success-bg: #00cbc033;
+  --status-success: #00cbc0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

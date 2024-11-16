@@ -1,1 +1,78 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0 align-items-center flex-wrap">
+        <!-- item start  -->
+        <li
+          class="nav-item navbar__info-card dot d-flex align-items-center mx-3"
+        >
+          <img
+            class="navbar__info-card-img ms-4 me-3"
+            src="/icons/gas-station-svgrepo-com.svg"
+            alt="station icon"
+          />
+          <div class="navbar__info-card-data me-2">2/3</div>
+          <span class="navbar__info-card-caption text-wrap"
+            >monitored stations
+          </span>
+        </li>
+        <!-- item end  -->
+        <!-- item start  -->
+        <li
+          class="nav-item navbar__info-card dot d-flex align-items-center mx-3"
+        >
+          <img
+            class="navbar__info-card-img ms-4 me-3"
+            src="/icons/loading-arrow-svgrepo-com.svg"
+            alt="station icon"
+          />
+          <div class="navbar__info-card-data me-2">20s</div>
+          <span class="navbar__info-card-caption text-wrap">last update </span>
+        </li>
+        <!-- item end  -->
+        <li class="nav-item">
+          <app-filtration-toggle
+            [buttonValues]="buttonValues"
+            [activeButton]="activeButton"
+            (onToggle)="handleToggle($event)"
+          />
+        </li>
+        <li class="nav-item">
+          <form [formGroup]="form" class="d-flex position-relative">
+            <mat-form-field class="example-full-width ms-5 rectangle">
+              <mat-label><strong>start</strong> date - time</mat-label>
+              <input
+                type="datetime-local"
+                placeholder=" date - time"
+                matInput
+                formControlName="startDateTime"
+              />
+              <mat-icon matSuffix>calendar_today</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width ms-5 square">
+              <mat-label><strong>end</strong> date - time</mat-label>
+              <input
+                type="datetime-local"
+                placeholder=" date - time"
+                matInput
+                formControlName="startDateTime"
+              />
+              <mat-icon matSuffix>calendar_today</mat-icon>
+            </mat-form-field>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

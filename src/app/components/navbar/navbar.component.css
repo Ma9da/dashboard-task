@@ -1,0 +1,64 @@
+:host {
+  --mdc-filled-text-field-container-color: trasparent;
+  --mat-app-surface-variant: trasparent;
+}
+nav {
+  background-color: white !important;
+  height: 124px;
+}
+.navbar__info-card {
+  position: relative;
+}
+.navbar__info-card-data {
+  font-size: 32px;
+  color: var(--text-primary);
+}
+.navbar__info-card-img {
+  width: 38.96px;
+  /* position: relative; */
+  color: var(--text-primary);
+}
+.dot::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 9;
+  border-radius: 50%;
+  background-color: var(--accent-orange);
+  bottom: 38%;
+  /* left: 0; */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.rectangle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-orange);
+  left: 4%;
+  bottom: 50%;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+.square::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-orange);
+  right: 44%;
+  bottom: 50%;
+}
+.navbar__info-card-caption {
+  font-size: 13px;
+  color: var(--text-primary);
+  width: 61px;
+  line-height: 1;
+}
+
+mat-form-field {
+  background-color: white !important;
+}

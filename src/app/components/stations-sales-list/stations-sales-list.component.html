@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row my-5">
+    <mat-list role="list" *ngFor="let card of stationSalesCards">
+      <mat-list-item role="listitem">
+        <img
+          [src]="card.imageSrc"
+          alt="Custom Icon"
+          matListItemIcon
+          class="custom-icon"
+          style="height: 32px; width: 39px"
+        />
+        <div matListItemTitle class="d-flex justify-content-between title">
+          {{ card.name }}
+          <span class="example-spacer"></span>
+          <span class="units">{{ card.total }} m<sup>3</sup></span>
+        </div>
+        <div matListItemLine>
+          <mat-progress-bar
+            mode="determinate"
+            [value]="card.progress"
+          ></mat-progress-bar>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

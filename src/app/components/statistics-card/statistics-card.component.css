@@ -1,0 +1,59 @@
+.card {
+  border: none;
+  padding: 15px;
+  height: 163px;
+  /*
+  width: 269px; */
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+.card:hover {
+  background-color: var(--accent-light-orange);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.card-title {
+  font-size: 40px;
+  color: var(--text-primary);
+}
+.unit {
+  font-size: 22px;
+}
+.card-subtitle {
+  font-size: 17px;
+  color: var(--text-primary);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.decrease:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent-orange);
+  position: absolute;
+  bottom: 20%;
+  left: 28%;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+}
+.increase::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--status-success);
+  position: absolute;
+  bottom: 20%;
+  left: 28%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.decrease {
+  color: var(--accent-orange);
+}
+.increase {
+  color: var(--status-success);
+}

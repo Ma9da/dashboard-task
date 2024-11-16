@@ -1,0 +1,11 @@
+.sidbar-position {
+  left: 0;
+  width: auto;
+  z-index: 3;
+}
+.body-position {
+  margin-left: 2rem;
+}
+.content-position {
+  margin-left: 6rem;
+}

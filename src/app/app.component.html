@@ -1,11 +1,20 @@
-<div class="container-fluid g-0">
-  <div class="row g-0">
-    <div class="col-2">
-      <app-sidebar />
+<div class="container-fluid g-0 position-relative">
+  <div class="row g-0 justify-content-center">
+    <div class="position-absolute sidbar-position">
+      <app-sidebar></app-sidebar>
     </div>
-    <div class="col-10">
-      <app-navbar />
-      <router-outlet />
+    <div class="col body-position">
+      <app-navbar></app-navbar>
+      <div class="row g-0 content-position">
+        <div class="col-8">
+          <app-statistics-card></app-statistics-card>
+          <app-stations-list />
+        </div>
+        <div class="col-3">
+          <app-station-radar-chart></app-station-radar-chart>
+          <app-stations-sales-list />
+        </div>
+      </div>
     </div>
   </div>
 </div>

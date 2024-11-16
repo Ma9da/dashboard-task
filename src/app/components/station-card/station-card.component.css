@@ -1,0 +1,118 @@
+:host {
+  --mdc-checkbox-selected-icon-color: var(--accent-orange);
+  --mdc-checkbox-unselected-icon-color: var(--accent-orange);
+}
+.active-header-image {
+  background-image: url("../../../../public/icons/gas-station-svgrepo-com-1.svg");
+  background-size: contain;
+}
+.inactive-header-image {
+  background-image: url("../../../../public/icons/gas-station-svgrepo-com-2.svg");
+  background-size: contain;
+}
+.mat-accent.mat-mdc-checkbox {
+  --mdc-checkbox-selected-pressed-icon-color: var(--accent-orange);
+  --mdc-checkbox-selected-checkmark-color: #ffffff;
+  --mdc-checkbox-selected-focus-icon-color: var(--accent-orange);
+  --mdc-checkbox-selected-hover-icon-color: var(--accent-orange);
+  --mdc-checkbox-selected-icon-color: var(--accent-orange);
+  --mdc-checkbox-selected-focus-state-layer-color: var(--accent-orange);
+  --mdc-checkbox-selected-hover-state-layer-color: var(--accent-orange);
+  --mdc-checkbox-unselected-pressed-state-layer-color: var(--accent-orange);
+  --mat-checkbox-disabled-label-color: rgba(26, 27, 31, 0.38);
+  --mat-checkbox-label-text-color: var(--text-primary);
+}
+.menu-title {
+  color: var(--text-primary);
+}
+
+.inactive-header-image::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 22%;
+  left: -1%;
+  background-color: var(--text-secondary);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.active-header-image::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 22%;
+  left: -1%;
+  background-color: var(--accent-orange);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.mat-mdc-card-avatar {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-card-title.mat-mdc-card-title:after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  left: 141px;
+  width: 80%;
+  color: #e0e7f1;
+  border: 1px solid;
+  z-index: 1;
+}
+mat-card {
+  border: none;
+  background-color: var(--neutral-white);
+  margin-bottom: 20px;
+}
+mat-card-title {
+  width: 170px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+th {
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+td {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.stations {
+  height: 425px;
+  padding: 0 28px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--accent-light-orange);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-orange);
+  width: 5px;
+  border-radius: 10px;
+}

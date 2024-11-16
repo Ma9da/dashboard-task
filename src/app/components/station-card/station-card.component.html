@@ -1,0 +1,87 @@
+<div class="stations overflow-y-scroll">
+  <ng-container *ngFor="let card of cards">
+    <!-- start card  -->
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header class="position-relative ms-4">
+        <div
+          *ngIf="card.avatarClass"
+          mat-card-avatar
+          [ngClass]="card?.avatarClass"
+        ></div>
+        <mat-card-title>{{ card.stationName }}</mat-card-title>
+        <span class="example-spacer"></span>
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="beforeMenu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon>more_horiz</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before" class="p-2">
+          <p class="menu-title">View Properties:</p>
+          <div class="d-flex">
+            <div class="filters-total d-flex flex-column">
+              <mat-checkbox checked="true" formControlName="totalSales"
+                >total Sales</mat-checkbox
+              >
+
+              <mat-checkbox checked="true" formControlName="totalTrans"
+                >total Transactions</mat-checkbox
+              >
+
+              <mat-checkbox checked="true" formControlName="totalVal"
+                >total value</mat-checkbox
+              >
+            </div>
+            <div class="filters-max d-flex flex-column">
+              <mat-checkbox formControlName="maxTransHrs"
+                >Max transaction count per hour</mat-checkbox
+              >
+
+              <mat-checkbox formControlName="maxTransTime"
+                >Max transaction count date-time</mat-checkbox
+              >
+
+              <mat-checkbox formControlName="compStatus"
+                >Compressor status</mat-checkbox
+              >
+            </div>
+          </div>
+        </mat-menu>
+      </mat-card-header>
+      <mat-card-content class="d-flex justify-content-between">
+        <table style="width: 100%">
+          <tr>
+            <th>Total Sales</th>
+            <td>{{ card.totalSales | number }} m <sup>3</sup></td>
+          </tr>
+          <tr>
+            <th>Total Value</th>
+            <td>{{ card.totalValue }} EGP</td>
+          </tr>
+        </table>
+        <table style="width: 100%">
+          <tr>
+            <th>Compression State</th>
+            <td>{{ card.compressionState }}</td>
+          </tr>
+          <tr>
+            <th>Total Transaction Count</th>
+            <td>5161</td>
+          </tr>
+        </table>
+        <table style="width: 100%">
+          <tr>
+            <th>Max Transaction / hour</th>
+            <td>{{ card.maxTransHrs }}</td>
+          </tr>
+          <tr>
+            <th>Max Transaction Date-Time</th>
+            <td>{{ card.maxTransTime }}</td>
+          </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+    <!-- end card -->
+  </ng-container>
+</div>

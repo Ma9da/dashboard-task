@@ -1,0 +1,21 @@
+:host {
+  --mdc-tab-indicator-active-indicator-color: var(--accent-orange);
+  --mat-app-primary: var(--accent-orange);
+  --mat-tab-header-active-focus-indicator-color: var(--accent-orange);
+  --mat-tab-header-active-hover-indicator-color: var(--accent-orange);
+  --mdc-outlined-card-container-color: white;
+  --mat-app-surface: white;
+  --mat-tab-header-active-label-text-color: var(--text-primary);
+  --mat-app-on-surface: var(--text-primary);
+  --mat-tab-header-inactive-label-text-color: var(--text-primary);
+  --mat-tab-header-active-focus-label-text-color: var(--text-primary);
+  --mat-tab-header-inactive-hover-label-text-color: var(--text-primary);
+  --mat-tab-header-active-hover-label-text-color: var(--text-primary);
+}
+mat-card {
+  border: none;
+}
+mat-card-title,
+mat-tab label {
+  color: var(--text-primary);
+}

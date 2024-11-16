@@ -1,0 +1,22 @@
+.stations {
+  height: 520px;
+  padding: 0 28px;
+}
+mat-menu {
+  background-color: aqua;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--accent-light-orange);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-orange);
+  width: 5px;
+  border-radius: 10px;
+}

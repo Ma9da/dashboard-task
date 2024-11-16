@@ -1,0 +1,29 @@
+.filteration-btn {
+  border: none;
+  width: 133px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  height: 42px;
+  background-color: transparent;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.active {
+  background-color: var(--accent-orange);
+  color: var(--neutral-white);
+  font-weight: bold;
+}
+.filteration {
+  background-color: var(--neutral-off-white);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.mat-mdc-fab {
+  box-shadow: none !important;
+}

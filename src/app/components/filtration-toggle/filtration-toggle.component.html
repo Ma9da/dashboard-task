@@ -1,0 +1,16 @@
+<div class="filteration d-flex" [ngStyle]="{ background: backgroundColor }">
+  <ng-container *ngFor="let button of buttonValues">
+    <button
+      mat-fab
+      class="filteration-btn"
+      [ngClass]="{ active: activeButton === button.value }"
+      (click)="sendValue(button.value)"
+    >
+      <mat-icon class="me-1" *ngIf="button.icon !== ''">
+        {{ button.icon }}
+      </mat-icon>
+      {{ button.value }}
+    </button>
+  </ng-container>
+</div>
+<!-- button value, click function, styling class -->

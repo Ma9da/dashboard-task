@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
@@ -9,6 +9,7 @@ import {
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
@@ -29,6 +30,7 @@ import { Ibutton } from '../../models/ibutton';
     MatIconModule,
     MatDatepickerModule,
     FiltrationToggleComponent,
+    NgIf,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './navbar.component.html',
@@ -53,11 +55,14 @@ export class NavbarComponent {
   ];
   constructor(private fb: FormBuilder) {
     this.form = fb.group({
-      startDateTime: new Date(),
-      endDateTime: new Date(),
+      startDateTime: ['', [Validators.required]],
+      endDateTime: ['', [Validators.required]],
     });
   }
   handleToggle(value: any) {
     this.activeButton = value;
+  }
+  appointmentSubmit(value: any) {
+    console.log(value);
   }
 }
